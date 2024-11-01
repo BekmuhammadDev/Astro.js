@@ -1,0 +1,55 @@
+---
+import MainLayout from "../layouts/main-layout.astro";
+import Card from "@components/ui/card/index.astro";
+
+const news = [
+	{
+		id: 1,
+		img: "https://picsum.photos/id/655/400/270",
+		title: "Networths technology acquinson 2021",
+		description:
+			"Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+			status:true,
+	},
+	{
+		id: 2,
+		img: "https://picsum.photos/id/659/400/270",
+		title: "Networths technology acquinson 2021",
+		description:
+			"Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+			status:false,
+	},	
+	
+	{
+		id: 3,
+		img: "https://picsum.photos/id/657/400/270",
+		title: "Networths technology acquinson 2021",
+		description:
+			"Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+			status:true,
+	},
+	{
+		id: 4,
+		img: "https://picsum.photos/id/658/400/270",
+		title: "Networths technology acquinson 2021",
+		description:
+			"Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.",
+			status:true,
+	},
+];
+---
+
+<MainLayout title="bosh sahifa">
+	<section>
+		<div class="container mx-auto">
+			<div class="grid grid-cols-4 gap-x-3 my-4">
+				
+
+				{
+					news.length > 0 ? news?.map((item)=> <Card data={item}/>) : <h1>Not Found</h1>
+				}
+				
+			</div>
+		</div>
+	</section>
+</MainLayout>
